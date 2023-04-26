@@ -1,0 +1,23 @@
+[package]
+name = "basecamp_04_demo"
+version = "0.1.0"
+description = "Workshop to learn the basics of testing a contract."
+homepage = ""
+# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest
+
+[dependencies]
+# foo = { path = "vendor/foo" }
+
+[scripts]
+sierra = "cairo-compile . -r"
+test = "cairo-test --starknet ."
+
+
+[[target.starknet-contract]]
+# Enable Sierra codegen.
+sierra = true
+
+# Enable CASM codegen.
+casm = true
+# Emit Python-powered hints in order to run compiled CASM class with legacy Cairo VM.
+casm-add-pythonic-hints = false
