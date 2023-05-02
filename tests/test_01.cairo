@@ -28,7 +28,7 @@ fn set_caller_as_zero() {
 // Testing
 #[test]
 #[available_gas(2000000)]
-fn test_erc20() {
+fn test_transfer() {
     let (sender, supply) = setup();
 
     let recipient: ContractAddress = contract_address_const::<2>();
@@ -40,10 +40,19 @@ fn test_erc20() {
     assert(ERC20::get_total_supply() == supply, 'Total supply should not change');
 }
 
-// HW: 
+#[test]
+#[available_gas(2000000)]
+#[should_panic(expected:('ERC20: transfer to 0', ))]
+fn test_transfer_to_zero() {
+    let (owner, supply) = setup();
 
-// Test Increase Allowance
+    let recipient: ContractAddress = contract_address_const::<0>();
+    let amount: u256 = u256_from_felt252(100);
+    ERC20::transfer(recipient, amount);
+}
 
-// Test Decrease Allowance
-
-// Test Transfer From 
+#[test]
+#[available_gas(2000000)]
+fn test_transfer_from() {
+    // Your code here
+}
