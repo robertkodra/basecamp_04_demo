@@ -8,11 +8,10 @@ This session aims to teach you how to start testing your contract in Cairo v1.
 
 What we need before we start:
 
-Setting up Cairo v1 and cairo-lang v0.11 and scarb.
+Setting up Cairo v1 and Scarb.
 
-- [cairo-lang](https://github.com/starkware-libs/cairo-lang)
-- [cairo_v1](https://github.com/starkware-libs/cairo)
-- [scarb](https://github.com/software-mansion/scarb/)
+- [cairo_v1](https://github.com/starkware-libs/cairo) - in this test we use alpha-7
+- [scarb](https://github.com/software-mansion/scarb/) - in this test we use 0.1.0
 
 More useful materials at the **Further Reading** section.
 
@@ -35,18 +34,17 @@ Once initialized, your project should look like this:
   <li>Scarb.toml</li>
 </ul>
 
-Now, we need to setup our project and create additional folders in order to structure our project for our testing environment. We will create a folder called `test` and a file called `test.cairo` which will point to the folder that we created. In addition we need to create a `cairo_project.toml` file so that when we run our testing command it will recognize our project structure and where these files are located.
+Now, we need to setup our project and create additional folders in order to structure our project for our testing environment. We will create a folder called `test` and a file `lib.cairo` which will point to the test files that we will create. In addition we need to create a `cairo_project.toml` file so that when we run our testing command it will recognize our project structure and where these files are located.
 
 In addition we will create a `Makefile` to add our shortcut commands.
 
 <ul>
   <li>src
     <ul>
-      <li>test</li>
+      <li>lib.cairo</li>
     </ul>
-    <ul>
-      <li>test.cairo</li>
-    </ul>
+  </li>
+  <li>tests
     <ul>
       <li>lib.cairo</li>
     </ul>
@@ -55,6 +53,14 @@ In addition we will create a `Makefile` to add our shortcut commands.
   <li>Makefile</li>
   <li>Scarb.toml</li>
 </ul>
+
+In the `cairo_project.toml`, we will define our `src` folder and the `tests` folder.
+
+```rust
+[crate_roots]
+basecamp_04_demo = "src"
+tests = "tests"
+```
 
 ## Useful Makefile commands
 
