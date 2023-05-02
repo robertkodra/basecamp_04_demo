@@ -6,6 +6,7 @@ use integer::u256;
 use integer::u256_from_felt252;
 use debug::PrintTrait;
 
+
 const NAME: felt252 = 'Starknet Token';
 const SYMBOL: felt252 = 'STAR';
 
@@ -24,23 +25,14 @@ fn test_01_constructor(){
     let res_symbol = ERC20::get_symbol();
     assert(res_symbol == SYMBOL, 'Symbol does not match.');
 
-}
-
-#[test]
-#[available_gas(2000000)]
-fn test_02_decimals(){
+    // Test decimals
     // Your code here
-}
 
-#[test]
-#[available_gas(2000000)]
-fn test_03_total_supplly(){
+    // Test total_supply
     // Your code here
-}
 
-#[test]
-#[available_gas(2000000)]
-fn test_04_balance_account(){
+    // Test the balance of the account variable
 
     // Your code here
+
 }
