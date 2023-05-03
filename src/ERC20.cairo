@@ -131,7 +131,7 @@ mod tests{
     use integer::u256_from_felt252;
     use starknet::ContractAddress;
     use starknet::contract_address_const;
-    use basecamp_04_demo::ERC20::ERC20;
+    use super::ERC20;
 
     const NAME: felt252 = 'Starknet Token';
     const SYMBOL: felt252 = 'STAR';
