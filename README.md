@@ -4,7 +4,7 @@ This session aims to teach you how to start testing your contract in Cairo v1.
 
 Slides: TBA
 
-Lecture Vide: TBA
+Lecture Video: TBA
 
 ![Nicolas Cage Let's Ride](https://media.tenor.com/PDEhy7xqVdoAAAAC/lets-ride-nicolas-cage.gif)
 
