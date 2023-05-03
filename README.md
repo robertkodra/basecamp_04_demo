@@ -15,7 +15,7 @@ What we need before we start:
 Setting up Cairo v1 and Scarb.
 
 - [cairo_v1](https://github.com/starkware-libs/cairo) - in this test we use alpha-7
-- [scarb](https://github.com/software-mansion/scarb/) - in this test we use 0.1.0
+- [scarb](https://github.com/software-mansion/scarb/) - in this test we use 0.2.0-alpha.0
 
 More useful materials at the **Further Reading** section.
 
