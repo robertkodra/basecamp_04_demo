@@ -36,8 +36,6 @@ Once initialized, your project should look like this:
 
 Now, we need to setup our project and create additional folders in order to structure our project for our testing environment. We will create a folder called `test` and a file `lib.cairo` which will point to the test files that we will create. In addition we need to create a `cairo_project.toml` file so that when we run our testing command it will recognize our project structure and where these files are located.
 
-In addition we will create a `Makefile` to add our shortcut commands.
-
 <ul>
   <li>src
     <ul>
