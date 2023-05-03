@@ -126,14 +126,12 @@ mod ERC20 {
 
 #[cfg(test)]
 mod tests{
-    use basecamp_04_demo::ERC20::ERC20;
-    use starknet::contract_address_const;
-    use starknet::ContractAddress;
-    use starknet::testing::set_caller_address;
+ 
     use integer::u256;
     use integer::u256_from_felt252;
-    use debug::PrintTrait;
-
+    use starknet::ContractAddress;
+    use starknet::contract_address_const;
+    use basecamp_04_demo::ERC20::ERC20;
 
     const NAME: felt252 = 'Starknet Token';
     const SYMBOL: felt252 = 'STAR';

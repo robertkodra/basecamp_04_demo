@@ -21,10 +21,6 @@ fn setup() -> (ContractAddress, u256) {
     (account, initial_supply)
 }
 
-fn set_caller_as_zero() {
-    set_caller_address(contract_address_const::<0>());
-}
-
 // Testing
 #[test]
 #[available_gas(2000000)]
